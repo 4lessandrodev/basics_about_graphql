@@ -1,0 +1,41 @@
+type Query {
+	users:[User]
+	actors:[Actor]
+	movies:[Movie]
+}
+
+type Mutation {
+	createUser (createUserInput: CreateUserInput!): User!
+}
+
+input CreateUserInput {
+	name: String!
+}
+
+type User {
+	id: ID!
+	name: String!
+	favoriteMovies: [Movie]
+}
+
+type Actor {
+	id: ID!,
+	name: String!,
+	age: Int,
+	gender: String,
+	movies: [Movie]
+}
+
+type Movie {
+	id: ID!
+	name: String!
+	year: Int!
+	rate: Float
+	comments:[Comment]
+}
+
+type Comment {
+	id: ID!
+	author: User!
+	text: String!
+}

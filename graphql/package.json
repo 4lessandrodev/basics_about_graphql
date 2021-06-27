@@ -1,0 +1,15 @@
+{
+	"name": "graphql-course",
+	"version": "1.0.0",
+	"main": "./src/app.js",
+	"license": "MIT",
+	"type": "module",
+	"scripts": {
+		"start": "nodemon ./src/app.js --ext js,graphql"
+	},
+	"dependencies": {
+		"faker": "^5.5.3",
+		"graphql-yoga": "^1.18.3",
+		"nodemon": "^2.0.7"
+	}
+}
