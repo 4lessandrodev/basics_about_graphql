@@ -1,6 +1,6 @@
 const Actor = {
 	movies: ( parent, args, ctx, info ) => {
-		const moviesActor = ctx.movies
+		const moviesActor = ctx.db.movies
 			.filter( ( movie ) => parent.movies
 				.includes( movie.id ) );
 		return moviesActor;

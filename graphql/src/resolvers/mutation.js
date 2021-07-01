@@ -6,7 +6,8 @@ const Mutation = {
 			name: args.createUserInput.name,
 			favoriteMovies: []
 		};
-		ctx.users.push( user );
+		ctx.db.users.push( user );
+		ctx.pubsub.publish( 'createdUser', { createdUser: user } );
 		return user;
 	}
 };

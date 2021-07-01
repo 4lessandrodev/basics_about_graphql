@@ -1,6 +1,6 @@
 const Comment = {
 	author: ( parent, args, ctx, info ) => {
-		return ctx.users.find( ( user ) => parent.author === user.id );
+		return ctx.db.users.find( ( user ) => parent.author === user.id );
 	}
 };
 

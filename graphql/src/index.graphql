@@ -8,6 +8,10 @@ type Mutation {
 	createUser (createUserInput: CreateUserInput!): User!
 }
 
+type Subscription {
+	createdUser: User!
+}
+
 input CreateUserInput {
 	name: String!
 }
